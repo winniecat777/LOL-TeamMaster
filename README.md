@@ -1,6 +1,6 @@
 # LOL-TeamMaster - LOL 組隊媒合網站
 
-https://ming77712.github.io/LOL-TeamMaster/
+https://winniecat777.github.io/LOL-TeamMaster/
 
 本專案僅為學習用途，不做任何商業使用
 
