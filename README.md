@@ -32,7 +32,7 @@ https://winniecat777.github.io/LOL-TeamMaster/
 
 ### 建立 db.json 資料庫
 
-可以註冊成為會員，也可以使用這組帳密做測試：
+#### 可以註冊成為會員，也可以使用這組帳密做測試：
 
 帳號：
 
@@ -44,18 +44,4 @@ test@gmail.com
 
 ```
 12345678
-```
-
-## 安裝與使用
-
-### 安裝套件
-
-```bash
-npm install
-```
-
-### 啟動開發環境
-
-```bash
-npm run dev
 ```
