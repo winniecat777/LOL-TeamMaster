@@ -23,7 +23,7 @@ https://winniecat777.github.io/LOL-TeamMaster/
 - 引導使用者使用網站功能
 - 熱門隊伍，透過 Swiper 以卡片形式瀏覽熱門的隊伍
 - 熱門隊友，透過 Swiper 以卡片形式瀏覽熱門的隊友
-  ![首頁](https://imgur.com/a/5oIIgoq)
+  ![首頁](https://imgur.com/k26LzJs)
 
 ### 會員中心
 
