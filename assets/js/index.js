@@ -91,7 +91,6 @@ const fetchDataThumbSort = async () => {
                   </div>
                   <div class="parallelogramRank">
                     <div class="parallelogramContent teamCardRankBg" style="
-                    background-position:-3px -14px;
                         background-image: url(./images/${
                           teamMemeberRank[0] === 0
                             ? 'img-team-badge.png'
@@ -124,7 +123,6 @@ const fetchDataThumbSort = async () => {
                 </div>
                 <div class="parallelogramRank">
                   <div class="parallelogramContent teamCardRankBg" style="
-                  background-position:-3px -14px;
                       background-image: url(./images/${
                         teamMemeberRank[1] === 0
                           ? 'img-team-badge.png'
@@ -157,7 +155,6 @@ const fetchDataThumbSort = async () => {
               </div>
               <div class="parallelogramRank">
                 <div class="parallelogramContent teamCardRankBg" style="
-                background-position:-3px -14px;
                     background-image: url(./images/${
                       teamMemeberRank[2] === 0
                         ? 'img-team-badge.png'
@@ -190,7 +187,6 @@ const fetchDataThumbSort = async () => {
             </div>
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
-              background-position:-3px -14px;
                   background-image: url(./images/${
                     teamMemeberRank[3] === 0
                       ? 'img-team-badge.png'
@@ -224,8 +220,6 @@ const fetchDataThumbSort = async () => {
           </div>
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
-            background-position:-3px -14px;
-
                 background-image: url(./images/${
                   teamMemeberRank[4] === 0
                     ? 'img-team-badge.png'
