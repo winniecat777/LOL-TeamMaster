@@ -1,16 +1,16 @@
-import{u as k,S as p,b as d,a as c,m as u,l as h}from"./main-BXgeMJb9.js";let g=[],m=0;const C=document.querySelector(".popularTeamsCard"),v=document.querySelector(".popularPlayersCard");function $(){w(),x("#popularTeamsSwiper",3,1),f()}const w=async()=>{try{let a=[],e=(await d.get(`${c}/teamsThumb?_sort=desc`)).data;e.length=12;let n="";for(const o of e){let t=[],b=[],s=[],i=[],y=o.teamMerberId.filter(l=>l>0);(await d.get(`${c}/teamsMember/${o.id}`)).data.forEach(l=>{l===null?b.push(0):b.push(l.avatar),l===null?t.push(0):t.push(l.username),l===null?s.push(0):s.push(l.userRank),l===null?i.push(0):i.push(l.likeHero)}),n+=`
+import{u as h,S as p,b as o,a as c,m as u,l as C}from"./main-DOwzqRzz.js";let g=[],m=0;const k=document.querySelector(".popularTeamsCard"),v=document.querySelector(".popularPlayersCard");function $(){w(),x("#popularTeamsSwiper",3,1),f()}const w=async()=>{try{let a=[],e=(await o.get(`${c}/teamsThumb?_sort=desc`)).data;e.length=12;let n="";for(const d of e){let t=[],b=[],s=[],i=[],y=d.teamMerberId.filter(l=>l>0);(await o.get(`${c}/teamsMember/${d.id}`)).data.forEach(l=>{l===null?b.push(0):b.push(l.avatar),l===null?t.push(0):t.push(l.username),l===null?s.push(0):s.push(l.userRank),l===null?i.push(0):i.push(l.likeHero)}),n+=`
         <div class="swiper-slide teamListCard">
           <div class="card-header mb-4 mb-md-6">
             <div class="d-block d-md-flex justify-content-between mb-4 mb-md-6">
               <div class="mb-2 mb-md-0">
-                <h3 class="card-title mb-2">${o.teamName}</h3>
+                <h3 class="card-title mb-2">${d.teamName}</h3>
                 <p class="card-subtitle text-secondary">
-                  遊戲時間：${o.playTime}
+                  遊戲時間：${d.playTime}
                 </p>
               </div>
               <div class="d-flex d-md-block justify-content-between align-items-center">
                 <span class="d-block text-secondary fs-8 mb-0 mb-md-2">
-                  ${o.thumb}
+                  ${d.thumb}
                   <i class="fa-regular fa-thumbs-up fs-7 ms-1"></i>
                 </span>
                 <span class="d-block text-secondary fs-6">
@@ -19,7 +19,7 @@ import{u as k,S as p,b as d,a as c,m as u,l as h}from"./main-BXgeMJb9.js";let g=
                 </span>
               </div>
             </div>
-            <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${h}/LOL-TeamMaster/teamDetails.html?id=${o.id}'">
+            <button type="button" class="teamCardBtn blueShadow w-100" onclick="location.href='${C}/LOL-TeamMaster/teamDetails.html?id=${d.id}'">
                   <p class="fs-7 w-100">立即加入</p>
                 </button>
           </div>
@@ -40,7 +40,6 @@ import{u as k,S as p,b as d,a as c,m as u,l as h}from"./main-BXgeMJb9.js";let g=
                   </div>
                   <div class="parallelogramRank">
                     <div class="parallelogramContent teamCardRankBg" style="
-                    background-position:-3px -14px;
                         background-image: url(./images/${s[0]===0?"img-team-badge.png":`ranking/${s[0]}.png`});
                       "></div>
                   </div>
@@ -61,7 +60,6 @@ import{u as k,S as p,b as d,a as c,m as u,l as h}from"./main-BXgeMJb9.js";let g=
                 </div>
                 <div class="parallelogramRank">
                   <div class="parallelogramContent teamCardRankBg" style="
-                  background-position:-3px -14px;
                       background-image: url(./images/${s[1]===0?"img-team-badge.png":`ranking/${s[1]}.png`});
                     "></div>
                 </div>
@@ -82,7 +80,6 @@ import{u as k,S as p,b as d,a as c,m as u,l as h}from"./main-BXgeMJb9.js";let g=
               </div>
               <div class="parallelogramRank">
                 <div class="parallelogramContent teamCardRankBg" style="
-                background-position:-3px -14px;
                     background-image: url(./images/${s[2]===0?"img-team-badge.png":`ranking/${s[2]}.png`});
                   "></div>
               </div>
@@ -103,7 +100,6 @@ import{u as k,S as p,b as d,a as c,m as u,l as h}from"./main-BXgeMJb9.js";let g=
             </div>
             <div class="parallelogramRank">
               <div class="parallelogramContent teamCardRankBg" style="
-              background-position:-3px -14px;
                   background-image: url(./images/${s[3]===0?"img-team-badge.png":`ranking/${s[3]}.png`});
                 "></div>
             </div>
@@ -125,8 +121,6 @@ import{u as k,S as p,b as d,a as c,m as u,l as h}from"./main-BXgeMJb9.js";let g=
           </div>
           <div class="parallelogramRank">
             <div class="parallelogramContent teamCardRankBg" style="
-            background-position:-3px -14px;
-
                 background-image: url(./images/${s[4]===0?"img-team-badge.png":`ranking/${s[4]}.png`});
               "></div>
           </div>
@@ -134,7 +128,7 @@ import{u as k,S as p,b as d,a as c,m as u,l as h}from"./main-BXgeMJb9.js";let g=
       </li>
             </ul>
           </div>
-        </div>`}C.innerHTML=n}catch(a){console.error("Error fetching data:",a)}};function f(){d.get(`${c}/users?_embed=friendLists&_sort=thumb&_order=desc`).then(a=>{g=a.data,g.length=15,P(g),x("#popularPlayersSwiper",4,2)}).catch(a=>{console.log(a)})}function P(a){let r="";a.forEach(e=>{r+=`<div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark">
+        </div>`}k.innerHTML=n}catch(a){console.error("Error fetching data:",a)}};function f(){o.get(`${c}/users?_embed=friendLists&_sort=thumb&_order=desc`).then(a=>{g=a.data,g.length=15,P(g),x("#popularPlayersSwiper",4,2)}).catch(a=>{console.log(a)})}function P(a){let r="";a.forEach(e=>{r+=`<div class="swiper-slide friendListCard border border-2 border-radius border-primary bg-dark">
     <div class="meber-card-top">
       <div class="member-avatar position-relative">
         <div class="avatar">
@@ -211,4 +205,4 @@ import{u as k,S as p,b as d,a as c,m as u,l as h}from"./main-BXgeMJb9.js";let g=
     </div>
   </div>
 </div>
-        `}),v.innerHTML=r}v.addEventListener("click",a=>{m=0;let r=Number(a.target.getAttribute("data-friendinvite"));if(!k){p.fire({title:"請先登入會員",icon:"warning",background:"#060818",color:"#D6EEFF"});return}r&&(d.get(`${c}/friendLists`).then(e=>{if(e.data.forEach(n=>{n.userId===u&&n.friendId===r&&(m=1)}),m){p.fire({icon:"error",title:"已經是好友",showConfirmButton:!1,timer:2e3,background:"#060818",color:"#D6EEFF"});return}}),p.fire({title:"確定要加入好友?",icon:"question",background:"#060818",color:"#D6EEFF",showCancelButton:!0,customClass:{confirmButton:"bg-white text-dark me-4",cancelButton:"border border-2 border-white bg-transparent"},confirmButtonText:"確定",cancelButtonText:"取消"}).then(e=>{e.isConfirmed&&d.post(`${c}/friendLists`,{userId:u,friendId:r,status:1}).then(n=>{p.fire({icon:"success",title:"已加入好友",showConfirmButton:!1,timer:2e3,background:"#060818",color:"#D6EEFF"}),f()}).catch(n=>{console.log(n)})}))});function x(a,r,e){new Swiper(a,{slidesPerView:r,spaceBetween:24,loop:!0,grabCursor:"true",pagination:{el:`#swiper-pagination${e}`,clickable:!0},navigation:{nextEl:`#swiper-button-next${e}`,prevEl:`#swiper-button-prev${e}`},breakpoints:{0:{slidesPerView:1},768:{slidesPerView:2},1024:{slidesPerView:r}}})}$();
+        `}),v.innerHTML=r}v.addEventListener("click",a=>{m=0;let r=Number(a.target.getAttribute("data-friendinvite"));if(!h){p.fire({title:"請先登入會員",icon:"warning",background:"#060818",color:"#D6EEFF"});return}r&&(o.get(`${c}/friendLists`).then(e=>{if(e.data.forEach(n=>{n.userId===u&&n.friendId===r&&(m=1)}),m){p.fire({icon:"error",title:"已經是好友",showConfirmButton:!1,timer:2e3,background:"#060818",color:"#D6EEFF"});return}}),p.fire({title:"確定要加入好友?",icon:"question",background:"#060818",color:"#D6EEFF",showCancelButton:!0,customClass:{confirmButton:"bg-white text-dark me-4",cancelButton:"border border-2 border-white bg-transparent"},confirmButtonText:"確定",cancelButtonText:"取消"}).then(e=>{e.isConfirmed&&o.post(`${c}/friendLists`,{userId:u,friendId:r,status:1}).then(n=>{p.fire({icon:"success",title:"已加入好友",showConfirmButton:!1,timer:2e3,background:"#060818",color:"#D6EEFF"}),f()}).catch(n=>{console.log(n)})}))});function x(a,r,e){new Swiper(a,{slidesPerView:r,spaceBetween:24,loop:!0,grabCursor:"true",pagination:{el:`#swiper-pagination${e}`,clickable:!0},navigation:{nextEl:`#swiper-button-next${e}`,prevEl:`#swiper-button-prev${e}`},breakpoints:{0:{slidesPerView:1},768:{slidesPerView:2},1024:{slidesPerView:r}}})}$();
